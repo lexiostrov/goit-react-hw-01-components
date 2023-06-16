@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Container, List, Item, Label, Percentage } from './Statistics.styled';
+import { getRandomHexColor } from '../randomColor/RandomColor';
 
 export const Statistics = ({ title, stats }) => (
   <Container>
@@ -21,10 +22,7 @@ export const Statistics = ({ title, stats }) => (
   </Container>
 );
 
-function getRandomHexColor() {
-  let bgColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  return bgColor;
-}
+getRandomHexColor();
 
 Statistics.propTypes = {
   title: PropTypes.string.isRequired,
